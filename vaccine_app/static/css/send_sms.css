@@ -1,0 +1,76 @@
+/* Reset and background */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7f9fb;
+}
+
+/* Container for the form */
+.send-sms-container {
+    width: 90%;
+    max-width: 500px;
+    margin: 80px auto 40px auto;
+    background-color: #ffffff;
+    padding: 30px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+.send-sms-container h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 24px;
+    color: #2c3e50;
+}
+
+/* Message display (success/error) */
+.send-sms-container p {
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Input section */
+.input-section input[type="tel"],
+.input-section textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #fdfdfd;
+    transition: border 0.3s ease;
+}
+
+.input-section input:focus,
+.input-section textarea:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+/* Textarea */
+.input-section textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+/* Submit button */
+.input-section button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.input-section button:hover {
+    background-color: #0056b3;
+}

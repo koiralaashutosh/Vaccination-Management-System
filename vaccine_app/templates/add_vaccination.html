@@ -1,0 +1,41 @@
+{% extends 'navigationbar.html' %}
+{% load static %}
+{% block body %}
+
+<link rel="stylesheet" href="{% static 'css/add_vaccination.css' %}">
+
+<div class="add-vaccination-container">
+    <h2>Add Vaccination</h2>
+    <form method="POST">
+        {% csrf_token %}
+
+        <label for="vaccination_name">Vaccination Name</label>
+        <input type="text" id="vaccination_name" name="vaccination_name" required>
+
+        <label for="recommended_time">Recommended Time (in months)</label>
+        <input type="number" id="recommended_time" name="recommended_time" required>
+
+        <label for="dose_number">Dose Number</label>
+        <input type="number" id="dose_number" name="dose_number" required>
+
+        <label for="vaccination_notes">Vaccination Notes</label>
+        <input type="text" id="vaccination_notes" name="vaccination_notes" required>
+
+        <button type="submit">Add Vaccination</button>
+    </form>
+</div>
+
+{% if error == "no" %}
+    <script>
+        alert("Record Saved Successfully");
+        window.location = "{% url 'view_vaccination' %}";
+    </script>
+{% endif %}
+
+{% if error == "yes" %}
+    <script>
+        alert("Something went wrong, try again");
+    </script>
+{% endif %}
+
+{% endblock %}

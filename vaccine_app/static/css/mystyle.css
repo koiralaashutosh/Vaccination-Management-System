@@ -1,0 +1,41 @@
+/* mystyle.css - Black & White Theme */
+
+/* Navbar background */
+nav.navbar {
+    background-color: #000 !important;
+}
+
+/* Brand and nav link color */
+nav .navbar-brand,
+nav .nav-link {
+    color: #fff !important;
+}
+
+/* Brand hover effect */
+nav .navbar-brand:hover {
+    color: #ccc !important;
+    font-weight: bold;
+}
+
+/* Nav link hover */
+nav .nav-link:hover {
+    color: #000 !important;
+    background-color: #fff !important;
+    border-radius: 10px;
+}
+
+/* Dropdown menu styling */
+.dropdown-menu {
+    background-color: #000 !important;
+    border: none;
+}
+
+/* Dropdown item default and hover */
+.dropdown-menu .dropdown-item {
+    color: #fff !important;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    color: #000 !important;
+    background-color: #fff !important;
+}

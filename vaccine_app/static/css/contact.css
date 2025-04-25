@@ -1,0 +1,116 @@
+/* Global Styles */
+body {
+  background-color: #000;  /* Black background for the page */
+  color: #fff;             /* White text */
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Main container for the contact page */
+.contact-container {
+  padding: 40px;
+  text-align: center;
+}
+
+/* Header Styles */
+header h1 {
+  font-size: 3.5em;
+  margin-bottom: 10px;
+  color: #fff;
+  animation: fadeInDown 1s ease;
+}
+
+header p {
+  font-size: 1.3em;
+  color: #ccc;  /* Light grey text */
+}
+
+/* Contact Information Section Styles */
+.contact-info {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.contact-info div {
+  width: 250px;
+  padding: 20px;
+  background-color: #222;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+  transition: transform 0.4s ease;
+}
+
+.contact-info div:hover {
+  transform: translateY(-10px);
+}
+
+/* Image Section */
+.contact-images {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.image-container {
+  text-align: center;
+  margin-top: 20px;
+  width: 250px;
+}
+
+.image-container p {
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: #ccc;
+}
+
+/* Image Styling */
+.contact-images img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  border: 3px solid white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.contact-images img:hover {
+  transform: scale(1.05);
+  filter: grayscale(0%) brightness(110%);
+}
+
+/* Footer Section */
+footer {
+  margin-top: 50px;
+  color: #ccc;
+  animation: fadeIn 1.5s ease;
+}
+
+/* Footer Link Styles */
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #0dcaf0;
+  transition: color 0.3s ease;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}

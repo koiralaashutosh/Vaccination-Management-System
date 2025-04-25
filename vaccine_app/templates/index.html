@@ -1,0 +1,54 @@
+<!--python manage.py shell-->
+<!--from django.contrib.auth.models import User-->
+<!--User.objects.filter(username='old_username').delete()-->
+
+<!--python manage.py migrate-->
+<!--python manage.py createsuperuser-->
+<!--Migration in Django updates the database to match the changes made in your models.-->
+
+{% extends 'navigationbar.html' %}
+{% load static %}
+{% block body %}
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+<div class="intro-container">
+    <div class="intro-box">
+        <h2 class="title">Welcome to Bon Bros Hospital</h2>
+        <p class="description">
+            Bon Bros Hospital is dedicated to delivering compassionate, high-quality, and accessible healthcare to all. From humble beginnings, we have grown into one of the most trusted medical institutions in the region, offering state-of-the-art medical care with a human touch.
+        </p>
+
+        <h3 class="subtitle">How It All Started</h3>
+        <p class="description">
+            Established in 2005 by two visionary brothers with a deep passion for community well-being, Bon Bros Hospital began as a small clinic with just 10 beds and a dedicated team. With a clear focus on care, commitment, and community, we expanded rapidly, serving thousands of patients each year with advanced medical treatments and compassionate service.
+        </p>
+
+        <h3 class="subtitle">Our Facilities & Services</h3>
+        <p class="description">
+            Today, Bon Bros Hospital is equipped with over 200 beds, 24/7 emergency care, a modern ICU, surgical units, maternity services, diagnostic labs, and a wide range of outpatient departments. Our departments include General Medicine, Pediatrics, Orthopedics, Cardiology, Gynecology, Dermatology, and more.
+        </p>
+
+        <h3 class="subtitle">Vaccination & Health Records</h3>
+        <p class="description">
+            Through our Vaccination Management System, patients and families can easily view vaccination records, book upcoming vaccinations, and stay informed about important public health campaigns. Our digital platform simplifies access to your health journey in a secure and efficient way.
+        </p>
+
+        <h3 class="subtitle">Our Mission & Vision</h3>
+        <p class="description">
+            Our mission is to provide affordable, patient-centered care that promotes long-term well-being. We envision a healthier society where medical support is a right, not a privilege. With this in mind, we continue to invest in technology, training, and community outreach.
+        </p>
+
+        <h3 class="subtitle">Why Choose Us?</h3>
+        <ul class="features">
+            <li>Highly qualified and compassionate medical professionals</li>
+            <li>Modern technology and equipment</li>
+            <li>Clean and comfortable facilities</li>
+            <li>Online appointment and health record access</li>
+            <li>Community-driven wellness programs</li>
+        </ul>
+
+        <p class="description">
+            Thank you for choosing Bon Bros Hospital. Your health, our priority.
+        </p>
+    </div>
+</div>
+{% endblock %}

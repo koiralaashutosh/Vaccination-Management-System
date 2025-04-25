@@ -1,0 +1,87 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    margin: 0;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 60px);
+    padding: 20px;
+}
+
+form {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 40px 30px;
+    border-radius: 8px;
+    border: 1px solid #000000;
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+form h2 {
+    margin-top: 0;
+    color: #000;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 14px;
+    margin: 12px 0;
+    border: 1px solid #000;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: #f4f4f4;
+    color: #000;
+}
+
+input:focus {
+    border-color: #000;
+    outline: none;
+    background-color: #fff;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    background-color: #000;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+}
+
+.auth-links {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.auth-links a {
+    color: #000;
+    text-decoration: underline;
+    margin: 0 5px;
+}
+
+.auth-links a:hover {
+    color: #555;
+    text-decoration: none;
+}

@@ -1,0 +1,52 @@
+{% extends 'navigationbar.html' %}
+{% load static %}
+{% block body %}
+
+<link rel="stylesheet" href="{% static 'css/add_appointment.css' %}">
+
+<div class="add-vaccination-container">
+    <h2>Add Appointment</h2>
+    <form method="POST">
+        {% csrf_token %}
+
+        <label for="child">Child</label>
+        <select id="child" name="child" required>
+            {% for child in children %}
+                <option value="{{ child.id }}">{{ child.full_name }}</option>
+            {% endfor %}
+        </select>
+
+        <label for="vaccination">Vaccination</label>
+        <select id="vaccination" name="vaccination" required>
+            {% for vac in vaccinations %}
+                <option value="{{ vac.id }}">{{ vac.vaccination_name }}</option>
+            {% endfor %}
+        </select>
+
+        <label for="scheduled_date">Scheduled Date</label>
+        <input type="date" id="scheduled_date" name="scheduled_date" required>
+
+        <label for="scheduled_time">Scheduled Time</label>
+        <input type="time" id="scheduled_time" name="scheduled_time" required>
+
+        <label for="appointment_notes">Appointment Notes</label>
+        <input type="text" id="appointment_notes" name="appointment_notes">
+
+        <button type="submit">Add Appointment</button>
+    </form>
+</div>
+
+{% if error == "no" %}
+    <script>
+        alert("Appointment Added Successfully");
+        window.location = "{% url 'view_appointment' %}";
+    </script>
+{% endif %}
+
+{% if error == "yes" %}
+    <script>
+        alert("Something went wrong, try again");
+    </script>
+{% endif %}
+
+{% endblock %}

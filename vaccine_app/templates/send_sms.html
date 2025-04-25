@@ -1,0 +1,28 @@
+{% extends 'navigationbar.html' %}
+{% load static %}
+{% block body %}
+
+<link rel="stylesheet" href="{% static 'css/send_sms.css' %}">
+
+<div class="send-sms-container">
+    <h1>Send SMS</h1>
+
+    {% if messages %}
+        {% for message in messages %}
+            <p style="color: {% if message.tags == 'success' %}green{% else %}red{% endif %};">
+                {{ message }}
+            </p>
+        {% endfor %}
+    {% endif %}
+
+    <form method="POST">
+        {% csrf_token %}
+        <div class="input-section">
+            <input type="tel" name="PhoneNumber" placeholder="Phone Number Here" required>
+            <textarea name="Messages" placeholder="Message Here" required></textarea>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

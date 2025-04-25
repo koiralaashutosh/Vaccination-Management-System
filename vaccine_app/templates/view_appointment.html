@@ -1,0 +1,39 @@
+{% extends 'navigationbar.html' %}
+{% load static %}
+
+{% block body %}
+<div class="container" style="margin-top:50px;">
+    <h2 class="text-center">View Appointments</h2>
+    <br><br>
+
+    <table class="table table-hover" id="example">
+        <thead>
+            <tr>
+                <th>Appointment ID</th>
+                <th>Child Name</th>
+                <th>Vaccination Name</th>
+                <th>Scheduled Date</th>
+                <th>Scheduled Time</th>
+                <th>Status</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for appointment in appointments %}
+            <tr>
+                <td>{{ appointment.id }}</td>
+                <td>{{ appointment.child.full_name }}</td>
+                <td>{{ appointment.vaccination.vaccination_name }}</td>
+                <td>{{ appointment.scheduled_date }}</td>
+                <td>{{ appointment.scheduled_time }}</td>
+                <td>{{ appointment.status }}</td>
+                <td>
+                    <a href="{% url 'delete_appointment' appointment.id %}" onclick="return confirm('Are you sure?')" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

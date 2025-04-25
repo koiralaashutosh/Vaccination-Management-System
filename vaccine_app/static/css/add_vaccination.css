@@ -1,0 +1,71 @@
+/* Basic Reset & Background */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7f9fb;
+}
+
+/* Container styling */
+.add-vaccination-container {
+    width: 90%;
+    max-width: 500px;
+    margin: 80px auto 40px auto;
+    background-color: #ffffff;
+    padding: 30px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+.add-vaccination-container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 24px;
+    color: #2c3e50;
+}
+
+/* Form labels */
+.add-vaccination-container label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #34495e;
+    font-size: 14px;
+}
+
+/* Inputs */
+.add-vaccination-container input[type="text"],
+.add-vaccination-container input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #fdfdfd;
+    transition: border 0.3s ease;
+}
+
+.add-vaccination-container input:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+/* Submit button */
+.add-vaccination-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.add-vaccination-container button:hover {
+    background-color: #0056b3;
+}

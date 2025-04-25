@@ -1,0 +1,34 @@
+{% extends 'navigationbar.html' %}
+{% load static %}
+
+{% block body %}
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+
+<div class="login-container">
+    <form method="POST">
+        {% csrf_token %}
+        <h2>Login</h2>
+
+        <label for="uname">Username:</label>
+        <input type="text" id="uname" name="uname" required>
+
+        <label for="pwd">Password:</label>
+        <input type="password" id="pwd" name="pwd" required>
+
+        <button type="submit">Login</button>
+
+        <div class="auth-links">
+            <a href="#">Forgot Password?</a>
+            <span>|</span>
+            <a href="#">Sign up for a new account</a>
+        </div>
+    </form>
+</div>
+
+{% if error == "yes" %}
+    <script>
+        alert("Invalid Login Credentials, Try Again!");
+    </script>
+{% endif %}
+
+{% endblock %}
