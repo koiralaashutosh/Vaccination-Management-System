@@ -1,1 +1,2 @@
 # Vaccination-Management-System
+This is a web application where the admin (superuser) can view, add, and delete users, vaccinations, and appointments. It also integrates the Twilio API to send SMS reminders to users about their upcoming vaccination appointments. The project is built using HTML, CSS, JavaScript, Bootstrap, and Django as the backend framework. We used SQLite, which is the default database in Django, providing a simple and lightweight setup for development.
